@@ -1,0 +1,149 @@
+.swiper-pagination {
+  position: static;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 70px 0;
+}
+
+.swiper-pagination-bullet {
+  text-align: center;
+  padding: 10px;
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+  background: #29252d;
+  cursor: pointer;
+  user-select: none;
+}
+
+.swiper-pagination-bullet-active {
+  width: 30px;
+  height: 30px;
+}
+
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  display: flex;
+  margin-top: 5rem !important;
+  transition-property: transform;
+  transition-timing-function: var(
+    --swiper-wrapper-transition-timing-function,
+    initial
+  );
+  box-sizing: content-box;
+}
+
+.tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: max-content !important;
+  cursor: pointer;
+  user-select: none;
+
+  &:hover,
+  &:active,
+  &:target,
+  &:focus,
+  &:visited,
+  &:focus-visible,
+  &:focus-within {
+    background: #29252d !important;
+  }
+
+  .circle {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 70px;
+      height: 70px;
+    }
+
+    .tab_icon_block {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .tab_icon {
+        width: 30px;
+        height: 30px;
+        transition: 0.2s;
+        filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0) brightness(0%)
+          contrast(0%);
+      }
+
+      .tab_time {
+        transition: 0.2s;
+        font-family: "Open Sans";
+        font-weight: 600;
+        color: #939296;
+        margin: 10px 0;
+
+        span {
+          font-family: "Cutive Mono";
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  .tab_label {
+    color: #fff !important;
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .tab {
+    transition: 0.2s;
+    transform: scale(1);
+  }
+
+  .tab_icon_active {
+    .circle {
+      .tab_icon {
+        transition: 0.2s;
+        filter: invert(42%) sepia(61%) saturate(4511%) hue-rotate(321deg)
+          brightness(100%) contrast(101%);
+      }
+
+      .tab_time {
+        color: #fe3c72;
+      }
+    }
+
+    transition: 0.2s;
+    transform: scale(1.12);
+  }
+}
+@media (max-width: 768px) {
+  .swiper-pagination {
+    margin: 9px 0;
+    justify-content: space-evenly;
+  }
+}
+
+@media (max-width: 576px) {
+  .swiper-pagination {
+    margin: 9px 0;
+    justify-content: space-evenly;
+  }
+  .swiper-container {
+    height: 100vh;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+}

@@ -1,0 +1,19 @@
+<div class="tab_details">
+  <ng-container [ngSwitch]="tabContent">
+    <ng-container *ngSwitchCase="'notes'">
+      <div class="content"> <p>Content for notes</p> </div>
+    </ng-container>
+    <ng-container *ngSwitchCase="'plans'">
+      <app-plans-content></app-plans-content>
+    </ng-container>
+    <ng-container *ngSwitchCase="'suggest'">
+      <app-suggest-content></app-suggest-content>
+    </ng-container>
+    <ng-container *ngSwitchCase="'profile'">
+      <div class="content"><p>Content for profile</p></div>
+    </ng-container>
+    <ng-container *ngSwitchCase="'automate'">
+      <div class="content"><p> Content for automate</p> </div>
+    </ng-container>
+  </ng-container>
+</div>

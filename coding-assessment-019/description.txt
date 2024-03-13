@@ -1,0 +1,13 @@
+For swipeable tabs, the app utilizes the Swiper JS package and its related API,
+ as suggested, to render tabs on the UI.
+
+A custom-tabs service was created for tabs to enhance reusability and code readability.
+
+The TabsRenderingService is used to render HTML code for the renderBullet API.
+I attempted to use ViewContainerRef.createComponent to instantiate the component (tabsheader),
+but it seems that the renderBullet API does not support this.
+It's something I am going to look into further.
+
+Tab content was separated from custom tabs for reusability purposes by implementing parent-child data sharing.
+
+An interface for tabs was created for readability and reusability purposes

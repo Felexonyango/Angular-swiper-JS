@@ -1,0 +1,181 @@
+.swiper-container {
+    position: relative;
+  }
+  
+  .swiper-pagination {
+    top: 2px;
+  }
+    .swiper-container .swiper-pagination {
+      position: absolute;
+      top: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    
+  }
+  
+  .swiper-container .swiper-pagination-bullet {
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    line-height: 50px;
+    background: #29252d;
+    cursor: pointer;
+    user-select: none;
+    margin: 0 20px;
+  }
+  
+  .swiper-container .swiper-pagination-bullet-active {
+    width: 30px;
+    height: 30px;
+  }
+  
+  
+  
+  .tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0 !important;
+    height: max-content !important;
+    background: #29252d !important;
+    cursor: pointer;
+    user-select: none;
+    margin: 0 50px;
+  }
+  
+  .tab:hover,
+  .tab:active,
+  .tab:target,
+  .tab:focus,
+  .tab:visited,
+  .tab:focus-visible,
+  .tab:focus-within {
+    background: #29252d !important;
+  }
+  
+  .circle {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .circle img {
+    height: 70px;
+  }
+  
+  .tab_icon_block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .tab_icon {
+    width: 30px;
+    height: 30px;
+    transition: 0.2s;
+    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0) brightness(0%) contrast(0%);
+  }
+  
+  .tab_time {
+    transition: 0.2s;
+    font-family: "Open Sans";
+    font-weight: 600;
+    color: #939296;
+  }
+  
+  .tab_time span {
+    font-family: "Cutive Mono";
+    font-weight: 400;
+  }
+  
+  .tab_label {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  
+  .tab {
+    transition: 0.2s;
+    transform: scale(1);
+  }
+  
+  .content {
+    text-align: center;
+  }
+  
+  .tab_icon_active .circle .tab_icon {
+    transition: 0.2s;
+    filter: invert(42%) sepia(61%) saturate(4511%) hue-rotate(321deg) brightness(100%) contrast(101%);
+  }
+  
+  .tab_icon_active .circle .tab_time {
+    color: #fe3c72;
+  }
+  
+  .tab_icon_active {
+    transition: 0.2s;
+    transform: scale(1.12);
+  }
+  
+  @media (max-width: 768px) {
+    .tab {
+      padding: 10px 0 !important;
+    }
+  
+    .circle img {
+      height: 50px;
+    }
+  
+    .tab_icon_block .tab_icon {
+      width: 24px;
+      height: 24px;
+    }
+  
+    .tab_time {
+      font-size: 10px;
+    }
+  
+    .tab_label {
+      font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .circle img {
+      height: 40px;
+      justify-content: center;
+    }
+  
+    .tab_icon_block .tab_icon {
+      width: 15px;
+      height: 15px;
+    }
+  
+    .content {
+      text-align: center;
+    }
+  
+    .tab_time {
+      font-size: 8px;
+    }
+  
+    .tab_label {
+      font-size: 9.6px;
+    }
+  }
+  
+  .tab-details {
+    text-align: center;
+    width: 100%;
+  }

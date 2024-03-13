@@ -1,0 +1,42 @@
+<div class="container_main glass-morphic">
+    <div class="title">1 booked - 2 suggested</div>
+    <div class="container">
+        <div *ngFor="let suggestion of suggestions; let sIndex = index" class="block">
+            <div class="suggestion">
+                <div class="day_name">
+                    {{suggestion.day}}
+                    <img src="assets/icons/line.svg" />
+                </div>
+                <div *ngFor="let suggest of suggestion.suggests;  let sdIndex = index" class="suggestion_block">
+                    <div class="main_block"
+                        [ngClass]="sIndex == activeBar[0] && sdIndex == activeBar[1] ? 'suggestion_block_active' : ''">
+                        <div class="header" (click)="setActive(sIndex , sdIndex)">
+                            <img src="assets/icons/default.svg" class="show_more" />
+                            <div class="time">
+                                {{suggest.time}}
+                            </div>
+                            <div class="free_time">
+                                ~{{suggest.freeTime}} hrs <span
+                                    [ngClass]="suggest.blocked ? 'blocked' :''">{{suggest.blocked ?
+                                    'blocked' : 'free'}}</span>
+                            </div>
+                        </div>
+                        <div *ngFor="let suggested of suggest.suggested" class="suggestion_items">
+                            <div>
+                                {{suggested.text}}
+                            </div>
+                            <div class="icons">
+                                <img [src]="'assets/icons/cancel' + (suggested.canceled ? '_active' : '') +'.svg'" />
+                                <img [src]="'assets/icons/accept' + (suggested.checked ? '_active' : '') +'.svg'" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <img src="assets/icons/line.svg" />
+    <div class="footer">Fill in Client and Prospect calendar data for more</div>
+    <img src="assets/images/background.png" class="background" />
+</div>
