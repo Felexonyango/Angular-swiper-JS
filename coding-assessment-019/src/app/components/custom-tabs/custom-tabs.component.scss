@@ -1,8 +1,13 @@
+.swiper-container {
+  height: 100vh;
+}
+
 .swiper-pagination {
   position: static;
   display: flex;
   justify-content: space-evenly;
-  margin: 70px 0;
+
+  margin: 70px 0 0 0 !important;
 }
 
 .swiper-pagination-bullet {
@@ -19,6 +24,13 @@
 .swiper-pagination-bullet-active {
   width: 30px;
   height: 30px;
+}
+.swiper-pagination-bullet-active .tab_icon {
+  width: 30px;
+  height: 30px;
+  transition: 0.2s;
+  filter: brightness(0) saturate(100%) invert(35%) sepia(47%) saturate(4180%)
+    hue-rotate(324deg) brightness(107%) contrast(99%);
 }
 
 .swiper-wrapper {
@@ -45,15 +57,15 @@
   cursor: pointer;
   user-select: none;
 
-  &:hover,
-  &:active,
-  &:target,
-  &:focus,
-  &:visited,
-  &:focus-visible,
-  &:focus-within {
-    background: #29252d !important;
-  }
+  // &:hover,
+  // &:active,
+  // &:target,
+  // &:focus,
+  // &:visited,
+  // &:focus-visible,
+  // &:focus-within {
+  //   background: #29252d !important;
+  // }
 
   .circle {
     position: relative;
@@ -80,22 +92,23 @@
         width: 30px;
         height: 30px;
         transition: 0.2s;
-        filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0) brightness(0%)
-          contrast(0%);
+        
       }
 
       .tab_time {
         transition: 0.2s;
         font-family: "Open Sans";
-        font-weight: 600;
+        font-weight: 900;
         color: #939296;
-        margin: 10px 0;
-
+        margin: 2px 0; 
+        font-size: 11px; 
+      
         span {
           font-family: "Cutive Mono";
           font-weight: 400;
         }
       }
+      
     }
   }
 
@@ -111,16 +124,14 @@
   }
 
   .tab_icon_active {
+    background-color: red;
     .circle {
       .tab_icon {
         transition: 0.2s;
-        filter: invert(42%) sepia(61%) saturate(4511%) hue-rotate(321deg)
-          brightness(100%) contrast(101%);
+        fill: #fe3c72;
       }
 
-      .tab_time {
-        color: #fe3c72;
-      }
+     
     }
 
     transition: 0.2s;

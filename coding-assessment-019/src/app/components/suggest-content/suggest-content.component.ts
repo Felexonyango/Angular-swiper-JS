@@ -12,13 +12,12 @@ import { ContentItem } from "../../interfaces/suggest.interface";
   templateUrl: "./suggest-content.component.html",
   styleUrl: "./suggest-content.component.scss",
 })
-
 export class SuggestContentComponent implements OnDestroy {
   contentItems: ContentItem[] = [];
   dataSubscription: Subscription;
 
   constructor(private suggestService: SuggestService) {
-    this.dataSubscription = this.suggestService.getData().subscribe(data => {
+    this.dataSubscription = this.suggestService.getData().subscribe((data) => {
       this.contentItems = data;
       // Handle data
     });
