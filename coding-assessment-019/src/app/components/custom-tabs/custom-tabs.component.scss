@@ -147,10 +147,22 @@
 
 @media (max-width: 576px) {
   .swiper-pagination {
-   
-    margin-top: 15rem;
+    margin: 9px 0;
     justify-content: space-evenly;
   }
+  .swiper-container {
+    height: 100vh;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+  }
+  // .swiper-pagination {
+   
+  //   margin-top: 15rem;
+  //   justify-content: space-evenly;
+  // }
   // .swiper-container {
   //   height: 100vh;
   //   margin-top: 20px;
