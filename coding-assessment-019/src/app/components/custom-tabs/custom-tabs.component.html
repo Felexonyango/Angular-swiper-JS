@@ -1,15 +1,18 @@
-<div class="swiper-container" #swiper>
-  <div class="swiper-pagination"></div>
+
+  <div class="swiper-container" #swiper>
+    <div class="swiper-pagination"></div>
+    
   
-
-
-<!-- <div class="swiper"> -->
-
-  <div class="swiper-wrapper">
-    <div class="swiper-slide" *ngFor="let tab of tabs; let i = index">
-      <app-tabcontent [tabContent]="tab.content"></app-tabcontent>
+  
+  <!-- <div class="swiper"> -->
+  
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" *ngFor="let tab of tabs; let i = index">
+        <app-tabcontent [tabContent]="tab.content"></app-tabcontent>
+      </div>
     </div>
+  <!-- </div> -->
   </div>
-<!-- </div> -->
-</div>
+
+
 
