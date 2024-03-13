@@ -74,8 +74,8 @@
     align-items: center;
 
     img {
-      width: 70px;
-      height: 70px;
+      width: 4rem;
+      height: 4rem;
     }
 
     .tab_icon_block {
@@ -147,14 +147,42 @@
 
 @media (max-width: 576px) {
   .swiper-pagination {
-    margin: 9px 0;
+   
+    margin-top: 15rem;
     justify-content: space-evenly;
   }
-  .swiper-container {
-    height: 100vh;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
+  // .swiper-container {
+  //   height: 100vh;
+  //   margin-top: 20px;
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: space-between;
+  // }
+
+  .tab .tab_label{
+    font-size: 15px;
+  }
+  .tab .circle img{
+    width: 2rem;
+    height: 2rem;
+  }
+
+
+
+  .tab {
+   
+    .circle {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      img {
+        width: 4rem;
+        height: 4rem;
+      }
+
+    }
+  
   }
 }
