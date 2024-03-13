@@ -12,7 +12,6 @@ import Swiper from "swiper";
 import { Navigation, Pagination, History } from "swiper/modules";
 import { CommonModule } from "@angular/common";
 import { Subscription } from "rxjs";
-import { TabheaderComponent } from "../tabheader/tabheader.component";
 import { TabcontentComponent } from "../tabcontent/tabcontent.component";
 import { CustomTabsService } from "../../services/custom-tabs.service";
 import { ITabs } from "../../interfaces/tab.interface";
@@ -23,7 +22,7 @@ Swiper.use([Navigation, Pagination, History]);
 @Component({
   selector: "app-custom-tabs",
   standalone: true,
-  imports: [CommonModule, TabheaderComponent, TabcontentComponent],
+  imports: [CommonModule, TabcontentComponent],
   templateUrl: "./custom-tabs.component.html",
   styleUrls: ["./custom-tabs.component.scss"],
   encapsulation: ViewEncapsulation.None,
