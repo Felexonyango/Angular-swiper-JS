@@ -23,7 +23,7 @@ export class SuggestService {
             id: 3,
             description:
                 "What are your most cherished memories and what do they reveal about what you value in life?",
-            circle: { value: 50, max: 100 },
+            circle: { value: 50, max: 100  },
         },
     ];
 

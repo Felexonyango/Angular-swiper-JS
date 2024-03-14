@@ -2,10 +2,11 @@
   padding: 15px 17px 20px 19px;
   box-sizing: border-box;
   border-radius: 8.772px;
-  background: #28252D;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2), 0px 0px 15px 0px rgba(255, 255, 255, 0.1);
+  background: #28252d;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2),
+    0px 0px 15px 0px rgba(255, 255, 255, 0.1);
   margin: 20px;
-  font-family: 'Gilroy-Regular', serif;
+  font-family: "Gilroy-Regular", serif;
 
   .content {
     display: flex;
@@ -17,13 +18,14 @@
       gap: 16px;
       justify-content: space-between;
 
-      span, .itemDescription {
+      span,
+      .itemDescription {
         color: #a8a8a8;
         font-size: 20px;
         font-style: normal;
         line-height: 15px;
         font-weight: 500;
-        font-family: 'Gilroy-Regular', serif;
+        font-family: "Gilroy-Regular", serif;
       }
 
       .itemDescription {
@@ -41,7 +43,8 @@
   @media screen and (max-width: 1024px) {
     .content {
       .contentItem {
-        .itemDescription, span {
+        .itemDescription,
+        span {
           font-size: 15px;
         }
 
@@ -91,5 +94,6 @@
   min-height: 41px;
 }
 
-
-
+::ng-deep #svg18 circle {
+  stroke: #fe3c72 !important;
+}
