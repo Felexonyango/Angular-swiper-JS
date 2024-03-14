@@ -12,14 +12,23 @@
                         [ngClass]="sIndex == activeBar[0] && sdIndex == activeBar[1] ? 'suggestion_block_active' : ''">
                         <div class="header" (click)="setActive(sIndex , sdIndex)">
                             <img src="assets/icons/default.svg" class="show_more" />
-                            <div class="time">
-                                {{suggest.time}}
-                            </div>
-                            <div class="free_time">
-                                ~{{suggest.freeTime}} hrs <span
-                                    [ngClass]="suggest.blocked ? 'blocked' :''">{{suggest.blocked ?
-                                    'blocked' : 'free'}}</span>
-                            </div>
+                            
+                                <div class="time">
+                                    {{suggest.time}}
+                                </div>
+                                <div class="wrapper">
+                                <div class="free_time">
+                                    ~{{suggest.freeTime}} hrs <span
+                                        [ngClass]="suggest.blocked ? 'blocked' :''">{{suggest.blocked ?
+                                        'blocked' : 'free'}}</span>
+                                </div>
+                                <div class="suggest_time">
+                                    {{suggest.suggestion}}
+                                </div>
+                                </div>
+
+                           
+                           
                         </div>
                         <div *ngFor="let suggested of suggest.suggested" class="suggestion_items">
                             <div>
@@ -37,6 +46,8 @@
     </div>
    
     <img src="assets/icons/line.svg"   class="icon_line_separator"/>
-    <div class="footer">Fill in Client and Prospect calendar data for more</div>
-    <!-- <img src="assets/images/background.png" class="background" /> -->
+    <div class="footer" >Fill in Client and Prospect calendar data for more</div>
+    
+        <img src="assets/images/background.png" class="background"/>
+
 </div>

@@ -5,8 +5,14 @@
       <div class="itemDescription">
         {{ item.description }}
       </div>
-      <lib-circle-progress class="circle" [value]="item.circle.value" [max]="item.circle.max" height="50"
-        prefix="$"></lib-circle-progress>
+      <lib-circle-progress
+        class="circle"
+        [value]="item.circle.value"
+        [max]="item.circle.max"
+        height="50"
+        prefix="$"
+      >
+      </lib-circle-progress>
     </div>
   </div>
 </div>

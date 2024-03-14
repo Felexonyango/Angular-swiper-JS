@@ -6,7 +6,6 @@
   position: static;
   display: flex;
   justify-content: space-evenly;
-
   margin: 70px 0 0 0 !important;
 }
 
@@ -19,6 +18,7 @@
   background: #29252d;
   cursor: pointer;
   user-select: none;
+  opacity: 0.7;
 }
 
 .swiper-pagination-bullet-active {
@@ -57,16 +57,6 @@
   cursor: pointer;
   user-select: none;
 
-  // &:hover,
-  // &:active,
-  // &:target,
-  // &:focus,
-  // &:visited,
-  // &:focus-visible,
-  // &:focus-within {
-  //   background: #29252d !important;
-  // }
-
   .circle {
     position: relative;
     display: flex;
@@ -92,7 +82,6 @@
         width: 30px;
         height: 30px;
         transition: 0.2s;
-        
       }
 
       .tab_time {
@@ -100,15 +89,14 @@
         font-family: "Open Sans";
         font-weight: 900;
         color: #939296;
-        margin: 2px 0; 
-        font-size: 11px; 
-      
+        margin: 2px 0;
+        font-size: 11px;
+
         span {
           font-family: "Cutive Mono";
           font-weight: 400;
         }
       }
-      
     }
   }
 
@@ -130,8 +118,6 @@
         transition: 0.2s;
         fill: #fe3c72;
       }
-
-     
     }
 
     transition: 0.2s;
@@ -147,54 +133,37 @@
 
 @media (max-width: 576px) {
   .swiper-pagination {
-    margin: 9px 0;
+    margin: 2px 0;
     justify-content: space-evenly;
   }
   .swiper-container {
     height: 100vh;
-    margin-top: 20px;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: end;
-
   }
-  // .swiper-pagination {
-   
-  //   margin-top: 15rem;
-  //   justify-content: space-evenly;
-  // }
-  // .swiper-container {
-  //   height: 100vh;
-  //   margin-top: 20px;
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: space-between;
-  // }
+  
 
-  .tab .tab_label{
+  .tab .tab_label {
     font-size: 15px;
   }
-  .tab .circle img{
+  .tab .circle img {
     width: 2rem;
     height: 2rem;
   }
 
-
-
   .tab {
-   
     .circle {
       position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
-  
+
       img {
         width: 4rem;
         height: 4rem;
       }
-
     }
-  
   }
 }
